@@ -15,10 +15,10 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="sparsevector_CPP-files\vector-skeleton.cpp">
-      <Filter>Header Files</Filter>
-    </ClCompile>
     <ClCompile Include="sparsevector_CPP-files\driver.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="sparsevector_CPP-files\vector-skeleton.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
