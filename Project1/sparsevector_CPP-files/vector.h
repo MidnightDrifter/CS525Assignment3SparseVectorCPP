@@ -37,8 +37,9 @@ namespace CS225
 					}
 					s = s->next;
 				} while (s);
-				this->setDimension(v.getDimension());
+				
 			}
+			this->setDimension(v.getDimension());
 		}
 
 		const ElementProxy operator[](long pos);

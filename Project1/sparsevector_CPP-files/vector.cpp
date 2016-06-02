@@ -881,6 +881,7 @@ namespace CS225
 			}
 		}
 		// x=NULL;
+		v.setDimension(this->getDimension());
 		return v;
 	}
 
@@ -905,7 +906,7 @@ namespace CS225
 			}
 			else
 			{
-				x = x->next;
+				
 				if (x != NULL)
 				{
 					v.Delete(x->pos);
@@ -918,8 +919,8 @@ namespace CS225
 				}
 			}
 		}
-		x = NULL;
-
+	//	x = NULL;
+		v.setDimension(this->getDimension());
 		return v;
 	}
 
