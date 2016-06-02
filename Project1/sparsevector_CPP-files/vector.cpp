@@ -358,7 +358,7 @@ namespace CS225
 					delete(current);
 				}
 				else {
-					do
+					while(next!=NULL)
 					{
 						if (next->pos == pos)
 						{
@@ -382,7 +382,7 @@ namespace CS225
 							next = next->next;
 						}
 
-					} while (next != NULL);
+					}
 				}
 				return;
 			}
@@ -848,10 +848,15 @@ namespace CS225
 	SparseVector SparseVector::operator*(const int t)
 	{
 		SparseVector v(*this);
-
+		v.setDimension(this->getDimension());
 		//printf("Head of this, v, are:  %s, %s\n", v.getHead(), this->getHead());
 
 		ElementNode * x = v.getHead();
+		ElementNode* y = NULL;
+		if(x)
+		{
+			y = x->next;
+		}
 
 		while (x)
 		{
@@ -868,7 +873,11 @@ namespace CS225
 					v.Delete(x->pos);
 				}
 				//v.setHead(NULL);
-				x = x->next;
+				x = y;
+				if(y)
+				{
+					y = y->next;
+				}
 			}
 		}
 		// x=NULL;
@@ -879,8 +888,13 @@ namespace CS225
 	SparseVector SparseVector::operator*(const int t) const
 	{
 		SparseVector v(*this);
-	
+		v.setDimension(this->getDimension());
 		ElementNode * x = v.getHead();
+		ElementNode* y = NULL;
+		if (x)
+		{
+			y = x->next;
+		}
 
 		while (x)
 		{
@@ -897,6 +911,11 @@ namespace CS225
 					v.Delete(x->pos);
 				}
 				//v.setHead(NULL);
+				x = y;
+				if (y)
+				{
+					y = y->next;
+				}
 			}
 		}
 		x = NULL;

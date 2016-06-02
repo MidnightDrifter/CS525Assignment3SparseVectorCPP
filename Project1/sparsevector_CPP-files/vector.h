@@ -23,18 +23,22 @@ namespace CS225
 
 		SparseVector() : pHead(NULL), dimension(0) {}// printf("Calling default ctor\n"); }
 		~SparseVector();
-		SparseVector(const SparseVector& v) : pHead(NULL), dimension(v.getDimension())
+		SparseVector(const SparseVector& v) : pHead(NULL), dimension(0)
 		{
-			ElementNode * s = v.getHead();
-			while(s)
-			{
-				if (s->data != 0)
-				{
-					Insert(s->pos, s->data);
-				}
-				s = s->next;
-			}
 
+			ElementNode * s = v.getHead();
+			if (s != NULL)
+			{
+				do
+				{
+					if (s->data != 0)
+					{
+						this->Insert(s->data, s->pos);
+					}
+					s = s->next;
+				} while (s);
+				this->setDimension(v.getDimension());
+			}
 		}
 
 		const ElementProxy operator[](long pos);

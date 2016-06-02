@@ -18,9 +18,6 @@
     <ClCompile Include="sparsevector_CPP-files\driver.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="sparsevector_CPP-files\vector-skeleton.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="sparsevector_CPP-files\vector.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
