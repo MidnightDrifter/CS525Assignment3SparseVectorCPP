@@ -112,6 +112,7 @@
   <ItemGroup>
     <ClCompile Include="sparsevector_CPP-files\driver.cpp" />
     <ClCompile Include="sparsevector_CPP-files\vector-skeleton.cpp" />
+    <ClCompile Include="sparsevector_CPP-files\vector.cpp" />
   </ItemGroup>
   <ItemGroup>
     <None Include="sparsevector_CPP-files\handout.pdf" />
@@ -136,6 +137,9 @@
     <None Include="sparsevector_CPP-files\out7" />
     <None Include="sparsevector_CPP-files\out8" />
     <None Include="sparsevector_CPP-files\out9" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="sparsevector_CPP-files\vector.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

@@ -21,6 +21,9 @@
     <ClCompile Include="sparsevector_CPP-files\vector-skeleton.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="sparsevector_CPP-files\vector.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <None Include="sparsevector_CPP-files\handout.pdf">
@@ -89,5 +92,10 @@
     <None Include="sparsevector_CPP-files\out18">
       <Filter>Resource Files</Filter>
     </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="sparsevector_CPP-files\vector.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>
