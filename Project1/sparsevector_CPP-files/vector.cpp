@@ -880,8 +880,17 @@ namespace CS225
 				}
 			}
 		}
-		// x=NULL;
-		v.setDimension(this->getDimension());
+		if (t == 0)
+		{
+			x = v.getHead();
+			if (x)
+			{
+				delete(x);
+			}
+			v.setHead(NULL);
+		}
+		//v.setDimension(this->getDimension());
+		//v.setHead(NULL);
 		return v;
 	}
 
@@ -919,8 +928,17 @@ namespace CS225
 				}
 			}
 		}
-	//	x = NULL;
-		v.setDimension(this->getDimension());
+		if (t == 0)
+		{
+			x = v.getHead();
+			if (x)
+			{
+				delete(x);
+			}
+			v.setHead(NULL);
+		}
+		//v.setDimension(this->getDimension());
+		//v.setHead(NULL);
 		return v;
 	}
 
